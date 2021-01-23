@@ -23,20 +23,21 @@ sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # Add the ROS 2 apt repository
-sudo apt-get update && \
- apt-get install -y --no-install-recommends \
+sudo apt-get update
+sudo apt-get install -y --no-install-recommends \
 		curl \
 		wget \ 
 		gnupg2 \
-		lsb-release \
-    && rm -rf /var/lib/apt/lists/*
+		lsb-release
+sudo rm -rf /var/lib/apt/lists/*
     
-wget --no-check-certificate https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc && apt-key add ros.asc
+wget --no-check-certificate https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc 
+sudo apt-key add ros.asc
 sudo sh -c 'echo "deb [arch=$(dpkg --print-architecture)] http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" > /etc/apt/sources.list.d/ros2-latest.list'
 
 # install development packages
-sudo apt-get update && \
-    apt-get install -y --no-install-recommends \
+sudo apt-get update
+sudo apt-get install -y --no-install-recommends \
 		build-essential \
 		cmake \
 		git \
@@ -52,8 +53,8 @@ sudo apt-get update && \
 		python3-rosinstall-generator \
 		libasio-dev \
 		libtinyxml2-dev \
-		libcunit1-dev \
-    && rm -rf /var/lib/apt/lists/*
+		libcunit1-dev
+sudo rm -rf /var/lib/apt/lists/*
   
 # install some pip packages needed for testing
 python3 -m pip install -U \
