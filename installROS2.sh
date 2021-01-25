@@ -111,8 +111,8 @@ sudo colcon build --symlink-install
 # For some reason, this has been an issue
 sudo colcon build --symlink-install
 
-
-echo 'source ${ROS_ROOT}/install/setup.bash' >> ~/.bashrc 
+# Using " expands environment variable immediately
+echo "source $ROS_ROOT/install/setup.bash" >> ~/.bashrc 
 echo "source /usr/share/colcon_cd/function/colcon_cd.sh" >> ~/.bashrc
 echo "export _colcon_cd_root=~/ros2_install" >> ~/.bashrc
 
