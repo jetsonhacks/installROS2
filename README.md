@@ -19,7 +19,7 @@ https://github.com/dusty-nv/jetson-containers
 </blockquote> 
 
 <h3>Notes</h3>
-Currently the NVIDIA Jetsons run Ubuntu 18.04. ROS2 foxy requires Ubuntu 18.04. However, by providing some of the 20.04 equivalents, it is possible to run ROS2 foxy on the Jetsons. This script provides workarounds. Note that this is not exhaustive, you may run into situations where there are gaps, and certain packages may have issues.
+Currently the NVIDIA Jetsons run Ubuntu 18.04. ROS2 foxy requires Ubuntu 20.04. However, by providing some of the 20.04 equivalents, it is possible to run ROS2 foxy on the Jetsons. This script provides workarounds. Note that this is not exhaustive, you may run into situations where there are gaps, and certain packages may have issues.
 
 <br><p>The file ~/.bashrc is modified using this script; You will want to make sure that the modifications match your expectations. For example, you may have a preference for having the install/setup.bash in another place (i.e. /root/.bashrc).
  
